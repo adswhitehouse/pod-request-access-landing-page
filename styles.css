@@ -1,0 +1,150 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Variables */
+:root {
+  /* Font */
+  --ff-primary: "Chivo", sans-serif;
+
+  /* Colors */
+  --green: #54e6af;
+  --blue-1: #121725;
+  --blue-2: #2c344b;
+  --blue-3: #5a668a;
+  --blue-4: #c2cbe5;
+  --white: #fff;
+  --red: #fb3e3e;
+
+  /* Font Sizes */
+  --fs-1: 3rem;
+  --fs-2: 1.125rem;
+  --fs-3: 0.875rem;
+
+  /* Font Weights */
+  --fw-1: 700;
+  --fw-2: 300;
+
+  /* Line Heights */
+  --lh-1: 200%;
+  --lh-2: 150%;
+  --lh-3: 120%;
+}
+
+/* Utility Classes */
+/* Font */
+.ff-primary {
+  font-family: var(--ff-primary);
+}
+
+/* Colors */
+.white {
+  color: var(--white);
+}
+
+.green {
+  color: var(--green);
+}
+
+.blue-1 {
+  color: var(--blue-1);
+}
+
+.blue-3 {
+  color: var(--blue-3);
+}
+
+.blue-4 {
+  color: var(--blue-4);
+}
+
+/* Background Colors */
+.blue-1-bg {
+  background-color: var(--blue-1);
+}
+
+.blue-2-bg {
+  background-color: var(--blue-2);
+}
+
+.green-bg {
+  background-color: var(--green);
+}
+
+/* Text Presets */
+.tp-1 {
+  font-size: var(--fs-1);
+  font-weight: var(--fw-2);
+  line-height: var(--lh-3);
+  text-transform: uppercase;
+}
+
+.tp-2 {
+  font-size: var(--fs-2);
+  font-weight: var(--fw-2);
+  line-height: var(--lh-2);
+}
+
+.tp-3 {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-1);
+  line-height: var(--lh-1);
+}
