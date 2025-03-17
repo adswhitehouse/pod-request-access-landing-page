@@ -67,7 +67,7 @@ textarea:not([rows]) {
 
   /* Colors */
   --green: #54e6af;
-  --blue-1: #121725;
+  --blue-1: rgb(18, 23, 37);
   --blue-2: #2c344b;
   --blue-3: #5a668a;
   --blue-4: #c2cbe5;
@@ -147,4 +147,216 @@ textarea:not([rows]) {
   font-size: var(--fs-3);
   font-weight: var(--fw-1);
   line-height: var(--lh-1);
+}
+
+/* HTML */
+html {
+  overflow-x: hidden;
+}
+
+/* Body */
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::after {
+  position: absolute;
+  content: "";
+  background: url(./images/desktop/bg-pattern-dots.svg) no-repeat center center /
+    cover;
+  max-width: 232px;
+  width: 100%;
+  max-height: 104px;
+  height: 100%;
+  bottom: 1.75rem;
+  right: 0;
+  z-index: 1;
+}
+
+/* Main */
+main {
+  padding: 5rem;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+/* Main Content */
+main h1 {
+  margin-block: 15vh 1rem;
+  max-width: 60%;
+}
+
+main p {
+  max-width: 28rem;
+  width: 100%;
+}
+
+/* Main Image */
+.main-image {
+  position: absolute;
+  height: calc(100vh - 10rem);
+  top: 5rem;
+  z-index: -1;
+  width: 65vw;
+  right: -3.5rem;
+}
+
+.main-image::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url(./images/desktop/image-host.jpg) no-repeat center center /
+    cover;
+}
+
+.main-image::after {
+  position: absolute;
+  content: "";
+  background: var(--blue-1);
+  width: 17.5rem;
+  height: 75%;
+  bottom: 0;
+  left: 0;
+}
+
+/* Platforms */
+.platforms {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: auto;
+}
+
+/* Input */
+.email-input {
+  padding: 0.25rem;
+  border-radius: 10rem;
+  max-width: 28rem;
+  width: 100%;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.email-input input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  padding-left: 1.5rem;
+}
+
+.email-input button {
+  border-radius: 10rem;
+  border: none;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media screen and (max-width: 55rem) {
+  /* Main */
+  main {
+    padding-inline: 2.75rem;
+  }
+
+  /* Body */
+  body::after {
+    right: -8rem;
+  }
+
+  /* Main Image */
+  .main-image {
+    top: 0;
+    height: calc(100vh - 5rem);
+  }
+}
+
+@media screen and (max-width: 47rem) {
+  /* Utility Classes */
+  .tp-1 {
+    font-size: 2rem;
+  }
+
+  .tp-2 {
+    font-size: 0.875rem;
+  }
+
+  /* Main */
+  main {
+    padding: 0 2.25rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 5vh;
+  }
+
+  /* Main Contents */
+  main h1 {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  /* Body */
+  body::after {
+    position: absolute;
+    content: "";
+    background: rgba(18, 23, 37, 0.9);
+    inset: 0;
+    max-width: unset;
+    max-height: unset;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+
+  /* Platforms */
+  .platforms {
+    gap: 1rem;
+    margin-top: 0;
+  }
+
+  .platforms img {
+    width: 2.75rem;
+  }
+
+  /* Input */
+  .email-input {
+    flex-direction: column;
+    background-color: transparent;
+    gap: 1rem;
+  }
+
+  .email-input input {
+    height: 2.75rem;
+    background-color: var(--blue-2);
+    border-radius: 10rem;
+  }
+
+  /* Main Image */
+  .main-image {
+    position: absolute;
+    inset: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    border: 1px solid;
+  }
+
+  .main-image::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(./images/desktop/image-host.jpg) no-repeat center center /
+      cover;
+  }
+
+  .main-image::after {
+    position: unset;
+    background: unset;
+  }
 }
