@@ -239,6 +239,8 @@ main p {
   width: 100%;
   display: flex;
   margin-top: 2rem;
+  position: relative;
+  border: 2px solid var(--blue-2);
 }
 
 .email-input input {
@@ -254,6 +256,32 @@ main p {
   border: none;
   padding: 0.5rem 2rem;
   cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.error-msg {
+  color: #fb3e3e;
+  font-size: 0.75rem;
+  font-weight: 700;
+  position: absolute;
+  bottom: -1.5rem;
+  left: 1.75rem;
+  display: none;
+}
+
+/* States */
+/* Hover */
+.email-input button:hover {
+  background-color: #aaf3d7;
+}
+
+/* Error */
+.error-msg-visibility {
+  display: block;
+}
+
+.error-border {
+  border: 2px solid #fb3e3e;
 }
 
 /* Media Queries */
